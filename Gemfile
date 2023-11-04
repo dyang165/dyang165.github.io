@@ -25,3 +25,6 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
+group :jekyll_plugins do
+  gem 'jekyll-diagrams'
+end
