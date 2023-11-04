@@ -8,7 +8,16 @@ layout: default
           <h1 class="post-title">
             {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
           </h1>
-          <p class="desc">{{ page.subtitle }}</p>
+       	<i><font size="+1"> Let's make AI with Respect, Kindness, Empathy. </font></i> 
+	<!-- Social -->
+          {%- if page.social %}
+            <h1 class="social">
+              <div class="contact-icons">
+                {% include social.html %}
+              </div>
+            </h1>
+          {%- endif %}
+	
         </header>
 
         <article>
@@ -59,19 +68,6 @@ layout: default
             {%- include selected_papers.html %}
           {%- endif %}
 
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
-            </div>
-          {%- endif %}
-        </article>
+                  </article>
 
 </div>
