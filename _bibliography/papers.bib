@@ -3,16 +3,18 @@ abbr={Under Review},
 author = {Daniel Yang and Tiantian Feng and Yoonsoo Nam and Jihwan Lee and Shrikanth Narayanan},
 booktitle={Under Review},
 title = {Is the Glass Half-Empty or Half-Full? A Mixture-of-Tasks Perspective on Missing Modality},
-year={2023}
+year={2023},
+abstract={A common issue with multimodal learning setups is the unavailability of one or more modalities. Historically, missing modality has been treated as a matter of robustness, aiming to prevent performance degradation caused by stochastic loss of training and testing modalities. However, this perspective does not align with many scientific and industrial use cases of deep models where unimodal inputs are more common than having multiple modalities. Moreover, it poses practical challenges such as complicating comparisons between studies and causing ambiguity in understanding optimal model behavior. We instead propose a `glass-half-full' approach---the Missing Modality Performance Testbed (MMPT)--- which sheds light on the pivotal elements for enhancing model performance under the effect of missing modalities. MMPT reconceptualizes missing modality robustness analysis as a fundamental aspect of multimodal representation learning. This formulation allows us to connect missing modality to modality competition, an area of work that aims to improve unimodal representations in a multimodal context for late-fusion models. We create a unified framework for both missing modality and modality competition by relaxing their architectural assumptions. Via this linkage, we explore how current approaches to missing modality impact the underlying model representations and the requisite representations for favorable performance. We validate this novel perspective on a wide variety of multimodal datasets with the intention of enabling simple and clear benchmarking for future research. Finally, we present a new state-of-the-art in missing modality performance and identify potential areas for further improvement.}
 }
-
 
 @inproceedings{ykammgn23,
 abbr={ACII},
 author = {Daniel Yang and Aditya Kommineni and Mohammad Alshehri and Nilamadabh Mohanty and Vedant Modi and Jonathan Gratch and Shrikanth Narayanan},
 booktitle = {Affective Computing and Intelligent Interaction (ACII)},
 title = {Context Unlocks Emotions: Text-based Emotion Classification Dataset Auditing with Large Language Models},
-year = {2023}
+year = {2023},
+abstract={The lack of contextual information in text data can make the annotation process of text-based emotion classification datasets challenging. As a result, such datasets often contain labels that fail to consider all the relevant emotions in the vocabulary. This misalignment between text inputs and labels can degrade the performance of machine learning models trained on top of them. As re-annotating entire datasets is a costly and time-consuming task that cannot be done at scale, we propose to use the expressive capabilities of large language models to synthesize additional context for input text to increase its alignment with the annotated emotional labels. In this work, we propose a formal definition of textual context to motivate a prompting strategy to enhance such contextual information. We provide both human and empirical evaluation to demonstrate the efficacy of the enhanced context. Our method improves alignment between inputs and their human-annotated labels from both an empirical and human-evaluated standpoint.},
+pdf={ACII.pdf}
 }
 
 @article{yjt,
@@ -21,7 +23,7 @@ author = {Daniel Yang and Kevin Ji and TJ Tsai},
 journal = {IEEE Transactions on Audio, Speech, and Language Processing (TASLP)},
 title = {A Study of Parallelizable Alternatives to Dynamic Time Warping for Aligning Long Sequences},
 year = {2022},
-pdf = {yang_talsp2022_study.pdf},
+pdf = {yang_taslp2022_study.pdf},
 abstract={This article investigates several parallelizable alternatives to DTW for estimating the alignment between two long sequences. Whereas most previous work has focused on reducing the total computation and/or memory costs of DTW, our focus is instead on reducing wall clock time by utilizing common hardware like GPUs that are optimized for parallel processing. We propose and study four different parallelizable alignment algorithms: the first three algorithms compute approximations of DTW by breaking the pairwise cost matrix into rectangular regions and processing the regions in parallel, and the fourth algorithm computes an exact DTW alignment by processing the cost matrix along diagonals rather than rows or columns. We characterize the performance of our proposed alignment algorithms on an audio-audio alignment task, and we develop GPU-based implementations for the two best-performing algorithms, which we call weakly-ordered Segmental DTW (WSDTW) and Parallelized Diagonal DTW (ParDTW). Our experiments indicate that ParDTW is the most practical and useful of the four algorithms: it computes an exact DTW alignment and reduces runtime by 1.5 to 2 orders of magnitude on long sequences compared to current alternatives. We present a comprehensive evaluation and study of the alignment accuracy, runtime, and practical limitations of the proposed alignment algorithms.},
 }
 
@@ -33,6 +35,8 @@ pages = {146},
 title = {Large-Scale Multimodal Piano Music Identification Using Marketplace Fingerprinting},
 volume = {15(5)},
 year = {2022},
+pdf={algorithms.pdf},
+abstract={This paper studies the problem of identifying piano music in various modalities using a single, unified approach called marketplace fingerprinting. The key defining characteristic of marketplace fingerprinting is choice: we consider a broad range of fingerprint designs based on a generalization of standard n-grams, and then select the fingerprint designs at runtime that are best for a specific query. We show that the large-scale retrieval problem can be framed as an economics problem in which a consumer and a store interact. In our analogy, the runtime search is like a consumer shopping in the store, the items for sale correspond to fingerprints, and purchasing an item corresponds to doing a fingerprint lookup in the database. Using basic principles of economics, we design an efficient marketplace in which the consumer has many options and adopts a rational buying strategy that explicitly considers the cost and expected utility of each item. We evaluate our marketplace fingerprinting approach on four different sheet music retrieval tasks involving sheet music images, MIDI files, and audio recordings. Using a database containing approximately 375,000 pages of sheet music, our method is able to achieve 0.91 mean reciprocal rank with sub-second average runtime on cell phone image queries. On all four retrieval tasks, the marketplace method substantially outperforms previous methods while simultaneously reducing average runtime. We present comprehensive experimental results, as well as detailed analyses to provide deeper intuition into system behavior}
 }
 
 @inproceedings{yt21,
@@ -41,6 +45,8 @@ author = {Daniel Yang and T. J. Tsai},
 booktitle = {Proceedings of the International Society for Music Information Retrieval (ISMIR) Candidate for best student paper},
 title = {Composer Classification with Cross-Modal Transfer Learning and Musically Informed Augmentation},
 year = {2021},
+pdf={composer_cls.pdf},
+abstract={This paper studies composer style classification of piano sheet music, MIDI, and audio data. We expand upon previous work in three ways. First, we explore several musically motivated data augmentation schemes based on pitch-shifting and random removal of individual notes or groups of notes. We show that these augmentation schemes lead to dramatic improvements in model performance, of a magnitude that exceeds the benefit of pretraining on all solo piano sheet music images in IMSLP. Second, we describe a way to modify previous models in order to enable cross-model transfer learning, in which a model trained entirely on sheet music can be used to perform composer classification of audio or MIDI data. Third, we explore the performance of trained models in a 1-shot learning context, in which the model performs classification among a set of composers that are unseen in training. Our results indicate that models learn a representation of compositional style that generalizes beyond the set of composers used in training.}
 }
 
 @inproceedings{yjt21,
@@ -50,6 +56,8 @@ booktitle = {Proceedings of the International Society for Music Information Retr
 pages = {810-817},
 title = {Aligning Unsynchronized Part Recordings to a Full Mix Using Iterative Subtractive Alignment},
 year = {2021},
+pdf = {yang_ismir2021_composer.pdf},
+abstract={This paper explores an application that would enable a group of musicians in quarantine to produce a performance of a chamber work by recording each part in isolation in a completely unsynchronized manner, and then generating a synchronized performance by aligning, time scale modifying, and mixing the individual part recordings. We focus on the main technical challenge of aligning the individual part recordings against a reference “full mix” recording containing a performance of the work. We propose an iterative subtractive alignment approach, in which each part recording is aligned against the full mix recording and then subtracted from it. We also explore different feature representations and cost metrics to handle the asymmetrical nature of the part–full mix comparison. We evaluate our proposed approach on two different datasets: one that is a modification of the URMP dataset that presents an idealized setting, and another that contains a small set of piano trio data collected from musicians during the pandemic specifically for this study. Compared to a standard pairwise alignment approach, we find that the proposed ap- proach has strong performance on the URMP dataset and mixed success on the more realistic piano trio data.}
 }
 
 @inproceedings{jyt21,
@@ -59,6 +67,9 @@ booktitle = {Proceedings of the International Society for Music Information Retr
 pages = {326-333},
 title = {Piano Sheet Music Identification Using Marketplace Fingerprinting},
 year = {2021},
+abstract={This paper studies the problem of identifying piano sheet music based on a cell phone image of all or part of a physical page. We re-examine current best practices for large-scale sheet music retrieval through an economics perspective. In our analogy, the runtime search is like a consumer shopping in a store. The items on the shelves correspond to fingerprints, and purchasing an item corresponds to doing a fingerprint lookup in the database. From this perspective, we show that previous approaches are extremely inefficient marketplaces in which the consumer has very few choices and adopts an irrational buying strategy. The main contribution of this work is to propose a novel fingerprinting scheme called marketplace fingerprinting. This approach redesigns the system to be an efficient marketplace in which the consumer has many options and adopts a rational buying strategy that explicitly considers the cost and expected utility of each item. We also show that deciding which fingerprints to include in the database poses a type of minimax problem in which the store and the consumer have competing interests. On experiments using all solo piano sheet music images in IMSLP as a searchable database, we show that marketplace fingerprinting substantially outperforms previous approaches and achieves a mean reciprocal rank of 0.905 with sub-second average
+runtime.},
+pdf={ji_ismir2021_piano.pdf}
 }
 
 @inproceedings{jyt21,
@@ -68,6 +79,9 @@ pages = {546-550},
 booktitle = {Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
 title = {Instrument Classification of Solo Sheet Music Images},
 year = {2021},
+pdf={ji_icassp2021_instrument.pdf},
+abstract={This paper studies instrument classification of solo sheet music. Whereas previous work has focused on instrument recognition in audio data, we instead approach the instrument classification problem using raw sheet music images. Our approach first converts the sheet music image into a sequence of musical words based on the bootleg score representation, and then treats the problem as a text classification task. We show that it is possible to significantly improve classifier performance by training a language model on unlabeled data, initializing a classifier with the pretrained language model weights, and then finetuning the classifier on labeled data. In this work, we train AWD-LSTM, GPT-2, and RoBERTa models on solo sheet music images from IMSLP for eight different instruments. We find that GPT-2 and RoBERTa slightly outperform AWD-LSTM, and that pretraining increases classification accuracy for RoBERTa from 34.5% to 42.9%. Furthermore, we propose two data augmentation methods that increase classification accuracy for
+RoBERTa by an additional 15%.}
 }
 
 @article{yt21,
@@ -79,6 +93,8 @@ pages = {42-51},
 title = {Piano Sheet Music Identification Using Dynamic N-gram Fingerprinting},
 volume = {4},
 year = {2021},
+abstract={This article introduces a method for large-scale retrieval of piano sheet music images. We study this problem in two different scenarios: camera-based sheet music identification and MIDI-sheet image retrieval. Our proposed method combines bootleg score features with a novel hashing scheme called dynamic N-gram fingerprinting. This hashing scheme ensures that every fingerprint is discriminative enough to warrant a table lookup, which improves both retrieval accuracy and runtime. On experiments using all piano sheet music images in the IMSLP database, the proposed method achieves >0.8 mean reciprocal rank with sub-second runtimes. As a practical application, we use our system to find matches between the Lakh MIDI dataset and IMSLP, which augments the IMSLP sheet music data with symbolic music information for a subset of pieces. We release our code and Lakh-IMSLP matches to facilitate future study.},
+pdf={tismir_yang.pdf}
 }
 
 @inproceedings{yt20,
@@ -88,6 +104,10 @@ booktitle = {Proceedings of the International Society for Music Information Retr
 pages = {481-488},
 title = {Camera-Based Piano Sheet Music Identification},
 year = {2020},
+pdf={yang_ismir2020.pdf},
+abstract={This paper presents a method for large-scale retrieval of piano sheet music images. Our work differs from previous studies on sheet music retrieval in two ways. First, we investigate the problem at a much larger scale than previous studies, using all solo piano sheet music images in the entire IMSLP dataset as a searchable database. Second, we use cell phone images of sheet music as our input queries, which lends itself to a practical, user-facing appli-
+cation. We show that a previously proposed fingerprinting method for sheet music retrieval is far too slow for a real-time application, and we diagnose its shortcomings. We propose a novel hashing scheme called dynamic n-gram fingerprinting that significantly reduces runtime while simultaneously boosting retrieval accuracy. In experiments on IMSLP data, our proposed method achieves a mean reciprocal rank of 0.85 and an average runtime of 0.98 sec-
+onds per query.}
 }
 
 @article{tystj20,
@@ -99,6 +119,11 @@ pages = {3115-3127},
 title = {Using Cell Phone Pictures of Sheet Music To Retrieve MIDI Passages},
 volume = {22},
 year = {2020},
+pdf={tsai_tmm2020_using.pdf},
+abstract={This article investigates a cross-modal retrieval problem in which a user would like to retrieve a passage of music from a MIDI file by taking a cell phone picture of several lines of sheet music. This problem is challenging for two reasons: it has a significant runtime constraint since it is a user-facing application, and there is very little relevant training data containing cell phone images of sheet music. To solve this problem, we introduce a novel feature representation called a bootleg score which encodes the position of noteheads relative to staff lines in sheet music. The MIDI representation can be converted into a bootleg score using deterministic rules of Western musical notation, and the sheet music image can be converted into a bootleg score using classical computer vision techniques for detecting simple geometrical shapes. Once the MIDI and cell phone image have been converted into bootleg scores, we can estimate the alignment
+using dynamic programming. The most notable characteristic of our system is that it has no trainable weights at all — only a set of about 40 hyperparameters. With a training set of just 400 images,
+we show that our system generalizes well to a much larger set of 1600 test images from 160 unseen musical scores. Our system achieves a test F measure score of 0.89, has an average runtime of
+0.90 seconds, and outperforms baseline systems based on music object detection and sheet–audio alignment. We provide extensive experimental validation and analysis of our system.}
 }
 
 @inproceedings{ytjst19,
@@ -108,5 +133,8 @@ booktitle = {Proceedings of the International Society for Music Information Retr
 pages = {916-923},
 title = {MIDI Passage Retrieval Using Cell Phone Pictures of Sheet Music},
 year = {2019},
+pdf={yang_ismir2019_midi},
+abstract={This paper investigates a cross-modal retrieval problem in which a user would like to retrieve a passage of music from a MIDI file by taking a cell phone picture of a physical page of sheet music. While audio–sheet music retrieval has been explored by a number of works, this scenario is novel in that the query is a cell phone picture rather than a digital scan. To solve this problem, we introduce a mid-level feature representation called a bootleg score which explicitly encodes the rules of Western musical notation. We convert both the MIDI and the sheet music into bootleg scores using deterministic rules of music and classical computer vision techniques for detecting simple geometric shapes. Once the MIDI and cell phone image have been converted into bootleg scores, we estimate the alignment using dynamic programming. The most notable characteristic of our system is that it does test-time adaptation and has no trainable weights at all—only a set of about 30 hyperparameters. On a dataset containing 1000 cell phone pictures taken of 100 scores of classical piano music, our system achieves an F measure score of .869 and outper-
+forms baseline systems based on commercial optical music recognition software.}
 }
 
