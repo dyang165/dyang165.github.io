@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started my Ph.D. at the University of Southern California.
+Began my Ph.D. program at the University of Southern California.
